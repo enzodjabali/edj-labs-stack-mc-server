@@ -23,7 +23,7 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.crafty.rule=Host(`crafty.edj-labs.com`)"
+        - "traefik.http.routers.crafty.rule=Host(`crafty.your-domain.com`)"
         - "traefik.http.services.crafty.loadbalancer.server.port=8443"
         - "traefik.http.routers.crafty.tls=true"
         - "traefik.http.routers.crafty.tls.certresolver=letsencrypt"
