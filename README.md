@@ -13,7 +13,16 @@ serversTransport:
   insecureSkipVerify: true
 ```
 
-3. Deploy the stack using Docker Swarm:
+3. Create the Crafty required directories:
+```bash
+mkdir -p /data/docker/crafty/backups
+mkdir -p /data/docker/crafty/logs
+mkdir -p /data/docker/crafty/servers
+mkdir -p /data/docker/crafty/config
+mkdir -p /data/docker/crafty/import
+```
+
+4. Deploy the stack using Docker Swarm:
 
 ```bash
 docker stack deploy -c docker-compose.yml mc-server
