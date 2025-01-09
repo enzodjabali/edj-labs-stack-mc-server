@@ -1,22 +1,13 @@
-# Stack Swarm: MC Server
+# Docker Compose: MC Server
 
-![Uptime Kuma Badge](https://uptime-kuma.edj-labs.com/api/badge/36/status)
-
-Note: <i>This stack uses Traefik. If you are willing to deploy Crafty using simply docker compose, check out `docker-compose` branch of this repository.</i>
-
-1. Change the value of `traefik.http.routers.crafty` in docker-compose.yml.
-
-2. Because Crafty uses a self-signed certificate, add the insecureSkipVerify parameter to your `traefik.yml` config file and restart your traefik stack:
-
-```yaml
-serversTransport:
-  insecureSkipVerify: true
+1. Stop Crafty using the following command:
+```
+docker compose up
 ```
 
-3. Deploy the stack using Docker Swarm:
-
-```bash
-docker stack deploy -c docker-compose.yml mc-server
+3. Stop Crafty using the following command:
+```
+docker compose down 
 ```
 
-Access Crafty at: https://crafty.your-domain.com
+Access Crafty at: https://localhost:8443
