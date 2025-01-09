@@ -1,6 +1,6 @@
 # Docker Compose: MC Server
 
-1. Stop Crafty using the following command:
+1. Start Crafty using the following command:
 ```
 docker compose up
 ```
