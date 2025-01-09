@@ -1,3 +1,3 @@
-# edj-labs-stack-mc-server
+# Stack MC Server
 
-https://uptime-kuma.edj-labs.com/api/badge/36/status
+![Uptime Kuma Badge](https://uptime-kuma.edj-labs.com/api/badge/36/status)
