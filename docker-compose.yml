@@ -1,19 +1,17 @@
-version: '3.9'
-
 services:
   crafty:
     image: registry.gitlab.com/crafty-controller/crafty-4:latest
     environment:
       - TZ=Europe/Paris
     ports:
-      - "8000:8000"               # HTTP Web Interface for Crafty
-      - "8443:8443"               # HTTPS Web Interface for Crafty
-      - "8123:8123"               # Dynmap Plugin (if used)
-      - "19132:19132/udp"         # Bedrock server support
-      - "25500-25600:25500-25600" # Minecraft server ports
+      - "8000:8000"                         # HTTP Web Interface for Crafty
+      - "8443:8443"                         # HTTPS Web Interface for Crafty
+      - "8123:8123"                         # Dynmap Plugin (if used)
+      - "19132:19132/udp"                   # Bedrock server support
+      - "25500-25600:25500-25600"           # Minecraft server ports
     volumes:
-      - ./crafty/backups:/crafty/backups   # Backups directory
-      - ./crafty/logs:/crafty/logs         # Logs directory
-      - ./crafty/servers:/crafty/servers   # Minecraft server files
-      - ./crafty/config:/crafty/app/config # Crafty configuration
-      - ./crafty/import:/crafty/import     # Import/export directory
+      - ./crafty/backups:/crafty/backups    # Backups directory
+      - ./crafty/logs:/crafty/logs          # Logs directory
+      - ./crafty/servers:/crafty/servers    # Minecraft server files
+      - ./crafty/config:/crafty/app/config  # Crafty configuration
+      - ./crafty/import:/crafty/import      # Import/export directory
